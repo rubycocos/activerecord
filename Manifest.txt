@@ -1,0 +1,6 @@
+History.md
+Manifest.txt
+README.md
+Rakefile
+lib/activerecord/utils.rb
+lib/activerecord/utils/version.rb
