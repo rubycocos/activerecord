@@ -36,9 +36,9 @@ generates
     end
 
 
-### 'rnd' finder
+### `rnd` finder
 
-e.g. find random record e.g.
+Find random record e.g.:
 
 
     beer_of_the_week = Beer.rnd
