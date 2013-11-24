@@ -19,7 +19,7 @@ generates
     def plato                 # reader
       send( :og )             #  e.g. return og
     end
-    
+       
     def plato=(value)         # writer
       send( :'og=', value )   #  e.g. return self.og=value
     end
@@ -32,7 +32,11 @@ generates
 generates
 
     def published
-      read_attribute_w_fallbacks( :published, :touched )
+      #  e.g. read_attribute_w_fallbacks( :published, :touched ) - equals:
+      
+      value = read_attribute( :published )
+      value = read_attribute( :touched )   if value.nil?
+      value 
     end
 
 
@@ -40,12 +44,11 @@ generates
 
 Find random record e.g.:
 
-
     beer_of_the_week = Beer.rnd
 
 equals
 
-    beer_of_the_week = Beer.offset( rand( Beer.count) ).limit(1).first
+    beer_of_the_week = Beer.offset( rand( Beer.count ) ).limit(1).first
 
 
 
