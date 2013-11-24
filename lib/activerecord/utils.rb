@@ -1,5 +1,4 @@
 
-
 require 'activerecord/utils/version'  # let version always go first
 
 
@@ -89,9 +88,9 @@ class ActiveRecord::Base
     ## why? why not?
     keys.each do |key|
       value = read_attribute( key )
-      return value unless value.nil?
+      break unless value.nil?  # if value.nil? == false
     end
-    value # fallthrough? return latest value (will be nil) --or return just nil - why? why not??
+    value # fallthrough -- return latest value (will be nil)
   end
 
 
