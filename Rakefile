@@ -18,13 +18,13 @@ Hoe.spec 'activerecord-utils' do
   self.history_file = 'History.md'
 
   self.extra_deps = [
-    ### ['logutils', '>= 0.5']
+    ['logutils']
   ]
 
   self.licenses = ['Public Domain']
 
   self.spec_extras = {
-   :required_ruby_version => '>= 1.9.2'
+   required_ruby_version: '>= 1.9.2'
   }
 
 

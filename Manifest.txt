@@ -7,3 +7,6 @@ lib/activerecord/utils/alias.rb
 lib/activerecord/utils/comp3.rb
 lib/activerecord/utils/random.rb
 lib/activerecord/utils/version.rb
+test/helper.rb
+test/test_finders.rb
+test/test_random.rb

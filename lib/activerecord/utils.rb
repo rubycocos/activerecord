@@ -13,8 +13,7 @@ module Utils
   end
 
   def self.root
-    ## fix/todo: check if another File.dirname level required!!!! - activerecord/utils
-    "#{File.expand_path( File.dirname(File.dirname(__FILE__)) )}"
+    "#{File.expand_path( File.dirname(File.dirname(File.dirname(__FILE__))) )}"
   end
 
 end  # module Utils
@@ -35,4 +34,6 @@ require 'activerecord/utils/random'
 
 
 puts ActiveRecord::Utils.banner    # say hello
+
+### puts "root: >#{ActiveRecord::Utils.root}<"   # check root path (remove later)
 
