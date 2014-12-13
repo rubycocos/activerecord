@@ -10,3 +10,4 @@ lib/activerecord/utils/version.rb
 test/helper.rb
 test/test_finders.rb
 test/test_random.rb
+test/test_readers.rb

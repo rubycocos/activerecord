@@ -2,7 +2,7 @@
 
 require 'helper'
 
-class TestFinders < MiniTest::Unit::TestCase
+class TestFinders < MiniTest::Test
 
 
   def test_find_by

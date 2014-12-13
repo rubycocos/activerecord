@@ -2,7 +2,7 @@
 
 require 'helper'
 
-class TestRandom < MiniTest::Unit::TestCase
+class TestRandom < MiniTest::Test
 
   def test_rnd
     b = Beer.rnd

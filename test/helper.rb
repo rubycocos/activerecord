@@ -3,10 +3,7 @@
 
 ## minitest setup
 
-# require 'minitest/unit'
 require 'minitest/autorun'
-
-# include MiniTest::Unit  # lets us use TestCase instead of MiniTest::Unit::TestCase
 
 
 # ruby stdlibs
@@ -21,7 +18,7 @@ require 'logger'
 require 'active_record'
 
 require 'logutils'
-require 'logutils/db'   # NB: explict require required for LogDb (not automatic) 
+require 'logutils/activerecord'
 
 
 # our own code
@@ -35,6 +32,27 @@ class Beer < ActiveRecord::Base
   alias_attr_writer :abvwrite, :abv
 end
 
+class Feed < ActiveRecord::Base
+  attr_reader_w_fallbacks  :published, :touched
+end
+
+
+class CreateFeedDb
+  def up
+    ActiveRecord::Schema.define do
+
+    create_table :feeds do |t|
+      t.string  :key,    null: false
+      t.string  :title,  null: false
+
+      t.datetime :publised
+      t.datetime :touched
+
+      t.timestamps
+    end 
+    end # Schema.define
+  end # method up
+end
 
 
 class CreateBeerDb
@@ -57,7 +75,7 @@ class CreateBeerDb
     end # Schema.define
   end # method up
 
-end  # class CreateMovieDb
+end  # class CreateBeerDb
 
 
 
@@ -81,9 +99,15 @@ def setup_in_memory_db
   ## build schema
   LogDb.create
   CreateBeerDb.new.up
-  
+
   Beer.create!( key: 'ottakringerhelles', name: 'Ottakringer Helles' )
   Beer.create!( key: 'ottakringerzwicklrot', name: 'Ottakringer Zwickl Rot' )
+
+
+  CreateFeedDb.new.up
+ 
+  Feed.create!( key: 'viennarb',    title: 'vienna.rb Blog' )
+  Feed.create!( key: 'rubyonrails', title: 'Ruby on Rails Blog' )
 end
 
 

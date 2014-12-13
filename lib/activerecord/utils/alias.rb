@@ -60,6 +60,7 @@ class Base
     ### todo: use a different name e.g.:
     ## read_attribute_cascade ?? - does anything like this exists already?
     ## why? why not?
+    value = nil
     keys.each do |key|
       value = read_attribute( key )
       break unless value.nil?  # if value.nil? == false
