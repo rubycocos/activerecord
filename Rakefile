@@ -3,7 +3,7 @@ require './lib/activerecord/utils/version.rb'
 
 Hoe.spec 'activerecord-utils' do
 
-  self.version = ActiveRecord::Utils::VERSION
+  self.version = ActiveRecordUtils::VERSION
 
   self.summary = 'activerecord-utils - utilities (e.g. random, alias_attr, etc.) for activerecord'
   self.description = summary
@@ -18,7 +18,8 @@ Hoe.spec 'activerecord-utils' do
   self.history_file = 'History.md'
 
   self.extra_deps = [
-    ['logutils']
+    ['logutils'],
+    ['activerecord']
   ]
 
   self.licenses = ['Public Domain']

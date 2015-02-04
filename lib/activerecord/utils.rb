@@ -1,10 +1,10 @@
+# encoding: utf-8
+
 
 require 'activerecord/utils/version'  # let version always go first
 
 
-module ActiveRecord
-
-module Utils
+module ActiveRecordUtils
 
   def self.banner
     ## add ar PRE too? how?
@@ -16,9 +16,7 @@ module Utils
     "#{File.expand_path( File.dirname(File.dirname(File.dirname(__FILE__))) )}"
   end
 
-end  # module Utils
-
-end  # module ActiveRecord
+end  # module ActiveRecordUtils
 
 
 ########################
@@ -31,9 +29,10 @@ end
 
 require 'activerecord/utils/alias'
 require 'activerecord/utils/random'
+require 'activerecord/utils/browser'
 
 
-puts ActiveRecord::Utils.banner    # say hello
+puts ActiveRecordUtils.banner    # say hello
 
-### puts "root: >#{ActiveRecord::Utils.root}<"   # check root path (remove later)
+### puts "root: >#{ActiveRecordUtils.root}<"   # check root path (remove later)
 

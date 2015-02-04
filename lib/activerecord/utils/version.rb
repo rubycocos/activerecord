@@ -1,9 +1,8 @@
+# encoding: utf-8
 
-module ActiveRecord
+module ActiveRecordUtils
 
-module Utils
-   VERSION = '0.3.0'
-end
+  VERSION = '0.4.0'
 
-end # module ActiveRecord
+end # module ActiveRecordUtils
 
