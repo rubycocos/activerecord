@@ -8,14 +8,14 @@ Hoe.spec 'activerecord-utils' do
   self.summary = 'activerecord-utils - utilities (e.g. random, alias_attr, etc.) for activerecord'
   self.description = summary
 
-  self.urls    = ['https://github.com/rubylibs/activerecord-utils']
+  self.urls    = ['https://github.com/rubycoco/activerecord-utils']
 
   self.author  = 'Gerald Bauer'
-  self.email   = 'webslideshow@googlegroups.com'
+  self.email   = 'wwwmake@googlegroups.com'
 
   # switch extension to .markdown for gihub formatting
   self.readme_file  = 'README.md'
-  self.history_file = 'History.md'
+  self.history_file = 'CHANGELOG.md'
 
   self.extra_deps = [
     ['logutils'],
@@ -25,7 +25,7 @@ Hoe.spec 'activerecord-utils' do
   self.licenses = ['Public Domain']
 
   self.spec_extras = {
-   required_ruby_version: '>= 1.9.2'
+   required_ruby_version: '>= 2.2.2'
   }
 
 

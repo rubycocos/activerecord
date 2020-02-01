@@ -2,8 +2,8 @@
 
 activerecord-utils gem - utilities (e.g. random, alias_attr, etc.) for activerecord in ruby
 
-* home  :: [github.com/rubylibs/activerecord-utils](https://github.com/rubylibs/activerecord-utils)
-* bugs  :: [github.com/rubylibs/activerecord-utils/issues](https://github.com/rubylibs/activerecord-utils/issues)
+* home  :: [github.com/rubycoco/activerecord-utils](https://github.com/rubycoco/activerecord-utils)
+* bugs  :: [github.com/rubycoco/activerecord-utils/issues](https://github.com/rubycoco/activerecord-utils/issues)
 * gem   :: [rubygems.org/gems/activerecord-utils](https://rubygems.org/gems/activerecord-utils)
 * rdoc  :: [rubydoc.info/gems/activerecord-utils](http://rubydoc.info/gems/activerecord-utils)
 

@@ -32,7 +32,8 @@ require 'activerecord/utils/random'
 require 'activerecord/utils/browser'
 
 
-puts ActiveRecordUtils.banner    # say hello
+# say hello
+puts ActiveRecordUtils.banner    if $DEBUG || (defined?($RUBYLIBS_DEBUG) && $RUBYLIBS_DEBUG)  
 
 ### puts "root: >#{ActiveRecordUtils.root}<"   # check root path (remove later)
 

@@ -1,8 +1,4 @@
-
-## $:.unshift(File.dirname(__FILE__))
-
 ## minitest setup
-
 require 'minitest/autorun'
 
 
