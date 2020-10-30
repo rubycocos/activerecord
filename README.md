@@ -3,6 +3,8 @@
 Git Gems:
 
 - [activerecord-utils](activerecord-utils) - utilities (e.g. random, alias_attr, etc.) for activerecord
+- [activityutils](activityutils) - activity (timeline) utilities
+
 
 
 
